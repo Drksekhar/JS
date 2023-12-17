@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASS oR FAIL</title>
+</head>
+
+<body>
+    <script>
+        marks = 35;
+        document.write(`<h1> PASS OR FAIL</h1>`)
+        // marks = prompt("Enter the Marks:")
+        if (marks >= 35) {
+            document.write("PASS")
+
+        } else {
+            document.write("FAIL")
+        }
+        document.write(`<h2> Distinction, First Class , Second Class, Third Class , Fail </h2>`)
+        marks1 = prompt("Enter the marks:")
+        if (marks1 >= 75) {
+            document.write("Distinction")
+        } else if (marks1 >= 60) {
+            document.write(" First Class")
+        } else if (marks1 >= 50) {
+            document.write(" Second Class")
+        } else if (marks1 >= 35) {
+            document.write(" Thrid  Class")
+        } else {
+            document.write("FAIL")
+        }
+
+        document.write(`<h2> Choosing the month using the swithc </h2>`)
+
+        let userInput = prompt("Enter the number (1-12) to represent the month of year");
+        let month = parseInt(userInput)
+        switch (month) {
+            case 1:
+                document.write("January")
+                break;
+            case 2:
+                document.write("February")
+                break;
+            case 3:
+                document.write("March")
+                break;
+            case 4:
+                document.write("April")
+                break;
+            case 5:
+                document.write("May")
+                break;
+            case 6:
+                document.write("June")
+                break;
+            case 7:
+                document.write("July")
+                break;
+            case 8:
+                document.write("August")
+                break;
+            case 9:
+                document.write("September")
+                break;
+            case 10:
+                document.write("October")
+                break;
+            case 11:
+                document.write("November")
+                break;
+            case 12:
+                document.write("December")
+                break;
+            default:
+                document.write("Invalid number that represent the month of the year")
+                break;
+        }
+
+        document.write(`<h2> Finding the month of the Year with else if ladder</h2>`)
+        let userInput1 = prompt("Enter the number (1-12) that represents the month of the year:")
+        let month1 = parseInt(userInput1)
+        if (month1 === 1) {
+            document.write("January")
+        } else if (month1 === 2) {
+            document.write("February")
+        }
+        else if (month1 === 3) {
+            document.write("March")
+        }
+        else if (month1 === 4) {
+            document.write("April")
+        }
+        else if (month1 === 5) {
+            document.write("May")
+        }
+        else if (month1 === 6) {
+            document.write("June")
+        }
+        else if (month1 === 7) {
+            document.write("July")
+        }
+        else if (month1 === 8) {
+            document.write("August")
+        }
+        else if (month1 === 9) {
+            document.write("September")
+        }
+        else if (month1 === 10) {
+            document.write("ocrober")
+        }
+        else if (month1 === 11) {
+            document.write("November")
+        }
+        else if (month1 === 12) {
+            document.write("December")
+        }
+        else {
+            document.write("Invalid number that represent the month of the year")
+        }
+
+    </script>
+</body>
+
+</html>
