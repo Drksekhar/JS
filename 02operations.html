@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERATIONS in JS</title>
+</head>
+
+<body>
+    <script>
+
+        document.write(`<h1>  OPERATORS AND INCREMENTING    </h1>`)
+        i = 5;
+        j = 10;
+        k = i + j;
+        document.write(k)
+
+        a = 10;
+        a += 3;
+        console.log(a);
+
+        document.write(`<h1>  IF ELSE   </h1>`)
+        age = 18;
+        // age = prompt("Enter your age");
+        if (age >= 18) {
+            console.log("Eligible for  voting")
+            document.write("Eligible for  voting")
+
+        } else {
+            console.log("Not eligible for voting")
+            document.write("Not Eligible for  voting")
+        }
+        document.write(`<h1>  ELSE IF LADDER </h1>`)
+        amount = prompt("Enter the amount");
+        amount = 250;
+
+        if (amount > 200) {
+            document.write("Have a lunch")
+        } else if (amount > 100) {
+            document.write("Have a breakfast")
+        } else if (amount >= 50) {
+            document.write("Hava a snacks")
+        } else {
+            document.write("Nothing")
+        }
+
+        // day = prompt("Enter the number ");
+        let userInput = prompt("Enter the number (1-7) to represent the day of week:");
+        let day = parseInt(userInput)
+        document.write(`<h1>  SWITCH STATEMENT</h1>`)
+        //day = 7;
+        switch (day) {
+            case 1:
+                document.write("Monday");
+                break;
+            case 2:
+                document.write("Tuesday");
+                break;
+            case 3:
+                document.write("Wednesday");
+                break;
+            case 4:
+                document.write("Thursday")
+                break;
+            case 5:
+                document.write('Friday')
+                break;
+            case 6:
+                document.write("Satuarday")
+                break;
+            default:
+                document.write("Invalid Day")
+        }
+
+
+    </script>
+</body>
+
+</html>
