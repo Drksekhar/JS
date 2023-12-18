@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPS and DATA Types</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write("<br>")
+            document.write(` (${i}) Hello <br>`)
+        }
+
+        for (let j = 1; j <= 5; j++) {
+            // document.write(`<br> <h2> For loop for J</h2>`) // what ever you write in this for loop it wil be printed the no of time as per the condition
+            document.write(`<br>`)
+            document.write(`<br>(${j}) Hai J `)
+        }
+    </script>
+    <h2>MULTIPLICATION TABLE</h2>
+    <script>
+        for (let k = 1; k <= 5; k++) {
+            document.write(`<br>`)
+            document.write(`<br>5x${k}= ${5 * k}`)
+        }
+    </script>
+    <h2>BREAK AND CONTINUE</h2>
+    <script>
+        for (let l = 1; l <= 100; l++) {
+            if (l === 20) {
+                break;
+            }
+            if (l === 10) {
+                continue
+            }
+            document.write(` <br> Value ${l} <br>`)
+        }
+    </script>
+    <h2>WHILE DO LOOP FIRST INITIALIZATION, NEXT CONDTION, THEN INCREMENT OR DECREMENT</h2>
+    <script>
+        m = 31;
+        while (m <= 40) {
+            document.write(`<br> ${m} <br>`)
+            m++;
+        }
+    </script>
+    <h2> DO WHILE LOOP FIRST INITIALIZATION, NEXT CONDTION, THEN INCREMENT OR DECREMENT</h2>
+    <script>
+        n = 41;
+        do {
+            document.write(`<br> (${n}) Hello N`)
+            n++;
+        } while (n <= 50);
+
+    </script>
+    <script>
+        cars = ['MARUTHI', 'RENAULT', 'BMW', 'SKODA', 'BENZ']
+        document.write(`<br> (${cars}) <br>`)
+        document.write(`<br> ${cars[0]}`)
+    </script>
+    <h2>Arrays with key and value</h2>
+    <script>
+        students = {
+            name: "Sekhar",
+            Age: "48",
+            Gender: "Male",
+            Phone: "8870337641",
+            Village: "Thudicherla"
+        }
+        console.log(students);
+        document.write(students)
+        console.log(students.Village)
+        document.write(students.Village)
+    </script>
+
+
+</body>
+
+</html>

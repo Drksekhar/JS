@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the month with if else</title>
+</head>
+
+<body>
+    <script>
+        document.write(`<h2> Find the month of the year</h2>`);
+        let userInput = prompt("Enter the number(1-12) that represents the month of the year")
+        let monthNumber = parseInt(userInput)
+        // Array to store month names
+        const months = [
+            "Invalid Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ]
+        // Check if the monthNumber is within the valid range 
+        if (monthNumber >= 1 && monthNumber <= 12) {
+            document.write(months[monthNumber]);
+        } else {
+            document.write(" Invalid Number that represent the month of the Year")
+        }
+
+
+        document.write(`<h2> Finding the week of the day </h2>`)
+        let userInput1 = prompt(" Enter the number (1-7) that represent the day of the week")
+        let dayNumber = parseInt(userInput1)
+
+        const weekdays = ["Invalid Day", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satuarday", "sunday"]
+        if (dayNumber >= 1 && dayNumber <= 7) {
+            document.write(weekdays[dayNumber])
+        } else {
+            document.write("Invalid number that represents the day of the week")
+        }
+
+    </script>
+
+</body>
+
+</html>
