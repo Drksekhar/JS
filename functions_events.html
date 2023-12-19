@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Events</title>
+</head>
+
+<body>
+    <button onclick="run()">Click to Run </button>
+    <script>
+        function run() {
+            alert("Hello")
+        }
+        function showmsg(x) {
+            alert(x)
+            console.log(x)
+
+        }
+    </script>
+    <h2>SHOW MSG</h2>
+    <button onclick="showmsg('Hello')">Show the message 1</button>
+    <button onclick="showmsg('Hai')">Show the message 2</button>
+    <script>
+        function addNumbers(a, b) {
+            return a + b;
+
+        }
+        function subtractNum(c, d) {
+            return c - d;
+        }
+        function mulNum(e, f) {
+            return e * f;
+        }
+
+        let result = addNumbers(5, 5)
+        alert(result)
+
+        let ressub = subtractNum(10, 5)
+        console.log(ressub)
+
+        let resmul = mulNum(10, 2)
+        console.log(resmul)
+    </script>
+
+    <h2>Dailog</h2>
+    <button onclick="one()">Show Dialog</button>
+    <button onclick="two()">Show Model</button>
+    <dialog id="d">
+        Hello Hai
+        <button onclick="closeDailog()">X</button>
+    </dialog>
+    <script>
+        box = document.getElementById('d')
+        function one() {
+            d.show()
+        }
+        function two() {
+            d.showModal()
+        }
+        function closeDailog() {
+            d.close()
+        }
+    </script>
+    <h2>Calculating Addition and Substraction</h2>
+    <!-- input fields for  numbers -->
+    <input type="number" id="a" value="6">
+    <input type="number" id="b" value="2">
+
+    <!-- Button to trigger addtion operation  -->
+    <button onclick="calculate()"> + - * /</button>
+
+    <!-- to dispaly results -->
+    <h2 id="sum">Sum of Two Numbers -</h2>
+    <h2 id="diff">-</h2>
+    <h2 id="mul">-</h2>
+    <h2 id="div">-</h2>
+
+    <script>
+        function calculate() {
+            // Get values from input fields
+            let a = Number(document.getElementById('a').value)
+            let b = Number(document.getElementById('b').value)
+
+            // Calculate sum and diff
+            let sum = a + b;
+            let diff = a - b;
+            let mul = a * b;
+            let div = a / b;
+
+            // Showing the results with calculated values
+            document.getElementById('sum').innerHTML = (`Sum of two numbers: ${sum}`);
+            document.getElementById('diff').innerHTML = (`Difference of two numbers: ${diff}`);
+            document.getElementById('mul').innerHTML = (`Multiplication of two numbers: ${mul}`);
+            document.getElementById('div').innerHTML = (`Division of two numbers: ${div}`);
+        }
+    </script>
+
+</body>
+
+</html>

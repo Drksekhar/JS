@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the month and week</title>
+</head>
+
+<body>
+    ,<h1>Finding the day of the week</h1>
+    <script>
+        let userInput = prompt("Enter the number (1-7) that represents the day of the week")
+        let dayNumber = parseInt(userInput)
+
+        const daysoftheweek = ['Invalid Number', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satuarday', 'Sunday']
+        if (dayNumber >= 1 && dayNumber <= 7) {
+            document.write(daysoftheweek[dayNumber])
+        } else {
+            document.write("Invalid number that represents the day of the week")
+        }
+    </script>
+    <h1>Finding the month of the Year</h1>
+    <script>
+        let entnum = prompt("Enter the number (1-12) that represents the month of the Year")
+        let monthNo = parseInt(entnum)
+
+        const months = [
+            "Invalid Month", "January", " FEB", "MAR ", " APR", " MAY", "JUN ", "JUl ", " AUG", "SEP ", "OCt ", " NOV", " Dec"
+        ]
+        if (monthNo >= 1 && monthNo <= 12) {
+            document.write(`This month is : ${months[monthNo]}`)
+        } else {
+            document.write("You have entered invalid number that represents the month of year")
+        }
+    </script>
+
+</body>
+
+</html>
