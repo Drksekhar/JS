@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="apple">Sekhar styling wih js</h1>
+    <h2> H2 Element styling using CSS</h2>
+    <button onclick="styliegh2()">Style H1 </button>
+
+    <script>
+        function styliegh2() {
+            var h1Element = document.getElementById('apple')
+            h1Element.innerHTML = "Kamanuri"
+            h1Element.style.color = "blue"
+            h1Element.style.backgroundColor = "orange"
+            h1Element.style.fontSize = "50px"
+            h1Element.style.padding = "10px"
+
+        }
+    </script>
+    <h2> Get Element by Class - Manupulating HTML and CSS with JS </h2>
+    <p class="classA">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere suscipit doloremque rem libero
+        odio laboriosam
+        iusto natus eaque tempore tempora commodi neque, debitis aliquid aut molestiae nihil? Assumenda, voluptatibus
+        neque?</p>
+    <p class="classA">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere suscipit doloremque rem libero
+        odio
+        laboriosam
+        iusto natus eaque tempore tempora commodi neque, debitis aliquid aut molestiae nihil? Assumenda, voluptatibus
+        neque?</p>
+    <p class="classA">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere suscipit doloremque rem libero
+        odio
+        laboriosam
+        iusto natus eaque tempore tempora commodi neque, debitis aliquid aut molestiae nihil? Assumenda, voluptatibus
+        neque?</p>
+    <p class="classA">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere suscipit doloremque rem libero
+        odio
+        laboriosam
+        iusto natus eaque tempore tempora commodi neque, debitis aliquid aut molestiae nihil? Assumenda, voluptatibus
+        neque?</p>
+    <b>Welcome to Ethio Language Box</b>
+    <b>Welcome to Ethio Language Box</b>
+    <b>Welcome to Ethio Language Box</b>
+
+    <script>
+        var pEle = document.getElementsByClassName('classA')
+        // styling the each one with different color
+        pEle[0].style.color = 'red'
+        pEle[1].style.color = 'blue'
+        pEle[2].style.color = 'green'
+        pEle[3].style.color = 'vilot'
+        // Setting the backgroud color to all p elements using the for loop
+        for (let i = 0; i < pEle.length; i++) {
+            pEle[i].style.backgroundColor = "yellow"
+
+        }
+        var bElement = document.getElementsByTagName('b')
+        for (let j = 0; j < bElement.length; j++) {
+            // const element = array[j];
+            bElement[j].style.fontSize = '20px'
+            bElement[j].style.color = 'darkblue'
+            bElement[j].style.backgroundColor = 'gold'
+
+            // bElement[j].innerHTML = (`<br>" Learn all the Ethiopia's Diverse languages "`)
+            bElement[0].innerHTML = (`<br>" Learn Ethiopian Languages "`)
+            bElement[1].innerHTML = (`<br>" Learn Languages and spek with the hearts "`)
+            bElement[2].innerHTML = (`<br>" Speak with the hearts of Ethiopians "`)
+            //     bElement[j].innerHTML = (`<br> ${Learn all the Ethiopias Diverse languages freely
+            // }`)
+
+            // selecting the first element with the class "ClassA" ang log it to the console
+            var firstPE = document.querySelector(".pEle")
+            console.log(firstPE)
+
+            var allPE = document.querySelectorAll(".pEle")
+            console.log(allPE)
+        }
+
+    </script>
+    <style>
+        h2 {
+            color: blueviolet;
+            font-size: 20px;
+        }
+    </style>
+</body>
+
+</html>
