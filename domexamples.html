@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+
+<body>
+    <button onclick="fun()"> Click</button>
+    <script>
+        function fun() {
+            alert('hai')
+        }
+    </script>
+    <button id="btn1">Click here</button><br><br>
+    <script>
+        document.getElementById('btn1').onclick = function () {
+            alert('function and even togeter')
+        }
+    </script>
+    Gender: <select name="Gender" id="genderdropdown" onclick="displaySelection(this)">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Others</option>
+    </select>
+    <script>
+        function displaySelection(dropdwon) {
+            alert(`${dropdwon.name} is ${dropdwon.value}`)
+        }
+    </script>
+    <hr>
+    <fieldset>
+        <legend> Font Size - Font Color - Background Color</legend><br>
+
+        Font Size: <input id="fs" type="number" onchange="changeFont(this)" value="18" min="8" max="50">
+        Font Color: <input type="color" onchange="changeCol(this)">
+        Background Color: <input type="color" onchange="changeBGC(this)" value="#ffffff">
+    </fieldset>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci tempore esse reprehenderit ducimus
+        quae eius,
+        perspiciatis quo pariatur ex eos itaque, earum nobis fuga laudantium inventore alias nesciunt, illo voluptatem?
+    </p>
+    <script>
+        function changeFont(fcbg) {
+            document.getElementById('para').style.fontSize = fcbg.value + 'px'
+        }
+        function changeCol(fcbg) {
+            document.getElementById('para').style.color = fcbg.value
+        }
+        function changeBGC(fcbg) {
+            document.getElementById('para').style.backgroundColor = fcbg.value
+        }
+    </script>
+
+    <button id="show" onclick="showApple()">Show Apple</button>
+    <button id="hide" onclick="hideApple()">Hide Apple</button>
+    <button id="toggle" onclick="toggleApple()">Toggle Apple</button> <br> <br>
+    <div id="apple">This is an Apple</div> <br>
+    <script>
+        var apple = document.getElementById('apple')
+        function showApple() {
+            apple.style.display = 'block'
+        }
+        function hideApple() {
+            apple.style.display = 'none'
+        }
+        function toggleApple() {
+            if (apple.style.display === 'none') {
+                apple.style.display = 'block'
+            } else {
+                apple.style.display = 'none'
+            }
+        }
+    </script>
+    <hr>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css">
+
+    <input type="password" id="pass">
+    <i id="eyeicon" class="eye slash icon" onclick="togglePassVisibility()"></i>
+    <script>
+
+
+        function togglePassVisibility() {
+            passInput = document.getElementById('pass')
+            eyeIcon = document.getElementById('eyeicon')
+            eyeIcon.classList.toggle('slash')
+            if (passInput.type === 'password') {
+                passInput.type = 'text'
+            } else {
+                passInput.type = "password"
+            }
+        }
+    </script>
+    <style>
+        i {
+            position: relative;
+            right: 25px;
+        }
+
+        #fs {
+            width: 3%;
+        }
+
+        #show {
+            background-color: blue;
+            color: antiquewhite;
+            height: 30px;
+            width: 150px;
+            font-size: 15px;
+            font-weight: 400;
+            border: 2px solid;
+        }
+
+        #hide {
+            background-color: #ff9900;
+            color: antiquewhite;
+            height: 30px;
+            width: 150px;
+            font-size: 15px;
+            border: 2px solid;
+            font-weight: 400;
+        }
+
+        #toggle {
+            background-color: rgb(6, 235, 55);
+            color: antiquewhite;
+            height: 30px;
+            width: 150px;
+            font-size: 15px;
+            border: 2px solid;
+            font-weight: 400;
+        }
+
+        /* input {
+            width: 25%;
+        } */
+    </style>
+
+</body>
+
+</html>
